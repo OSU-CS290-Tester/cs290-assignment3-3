@@ -10,7 +10,14 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  var fish = new Object();
+  fish.type = "Goldfish";
+  fish.brand = "Pepperidge Farm";
+  fish.flavor = "Cheddar";
+  fish.count = 2000;
+  
+  return fish;
+  //return undefined; //Modify ONLY this line
   //end your code
 }
 
