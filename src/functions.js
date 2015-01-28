@@ -13,7 +13,9 @@
 */
 
 //your code here
-
+function uselessFunction() {
+	return null;
+}
 //end your code
 
 var bar = 'not a function';
@@ -30,7 +32,17 @@ var barType = typeof bar;
 */
 
 //your code here
-
+bar = function(doubleArray[]){
+	var success = true;
+	for (var i = 0; i < doubleArray.length; i++){
+		if(!parseInt(doubleArray[i]) && !parseFloat(doubleArray[u])){
+			success = false;
+		}
+		doubleArray[i] *=2;
+	}
+	
+	return success;
+}
 //end your code
 
 /**
@@ -66,5 +78,7 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-
+function parseGit(Array.<string> logArray){
+	
+}
 //end your code
