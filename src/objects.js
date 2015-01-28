@@ -45,7 +45,9 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+function MessageLog(user){
+this.user = user;
+}
 //end your code
 
 /**

@@ -90,6 +90,7 @@ function parseGit(logArray){
 		//parse hash (slice? split?)
 		temphash = logArray[i].split(' ', 1);
 		//parse date
+		
 		//parse message
 		//construct GitLog
 		gitArray[i] = GitLog(temphash, tempdate, tempmess);
