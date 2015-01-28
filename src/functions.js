@@ -32,7 +32,7 @@ var barType = typeof bar;
 */
 
 //your code here
-bar = function(doubleArray[]){
+bar = function(doubleArray){
 	var success = true;
 	for (var i = 0; i < doubleArray.length; i++){
 		if(!parseInt(doubleArray[i]) && !parseFloat(doubleArray[u])){
@@ -78,7 +78,23 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-function parseGit(Array.<string> logArray){
+function parseGit(logArray){
+	var temphash;
+	var tempdate;
+	var tempmess;
 	
+	//instantiate new array for GitLog objects
+	var gitArray = new Array();
+	//iterate over string array
+	for (var i = 0; i < logArray.length; i++){
+		//parse hash (slice? split?)
+		temphash = logArray[i].split(' ', 1);
+		//parse date
+		//parse message
+		//construct GitLog
+		gitArray[i] = GitLog(temphash, tempdate, tempmess);
+	}
+	//return array of GitLog objects
+	return gitArray;
 }
 //end your code
