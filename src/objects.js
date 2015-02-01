@@ -45,8 +45,23 @@ function returnObjectLiteral() {
 */
 
 //your code here
-function MessageLog(user){
-this.user = user;
+//function MessageLog(user){
+//  this.user = user;
+//  var sent = 0;
+//  var received = 0;
+  
+//  this.logMessage = function(messageText, direction){
+//    if(direction == 0){
+//	  this.sent ++;
+//	}
+//	else if(direction == 1){
+//	  this.received ++;
+//	}
+//	else;
+// }
+//  this.getSentMessage = function(n){}
+//  this.totalSent = function(){return this.sent}
+//  this.totalReceived = function(){return this.received}
 }
 //end your code
 
@@ -66,5 +81,8 @@ this.user = user;
 */
 
 //your code here
-
+//var myLog = new MessageLog(BlackHatGuy);
+//myLog.logMessage("foo", 1);
+//myLog.logMessage("bar", 1);
+//myLog.logMessage("baz", 1);
 //end your code

@@ -35,7 +35,7 @@ var barType = typeof bar;
 bar = function(doubleArray){
 	var success = true;
 	for (var i = 0; i < doubleArray.length; i++){
-		if(!parseInt(doubleArray[i]) && !parseFloat(doubleArray[u])){
+		if(isNaN(doubleArray[i])){
 			success = false;
 		}
 		doubleArray[i] *=2;
