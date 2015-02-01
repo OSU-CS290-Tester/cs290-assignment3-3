@@ -16,7 +16,7 @@ function variableModification(a) {
   //your code here
 	plus5 = 5 + a;
 	asString = String(a);
-	yourNumberIs = "Your Number is " + a + ".";
+	yourNumberIs = "Your Number is " + a;
   //end your code
   return [plus5, asString, yourNumberIs, a];
 }
@@ -51,8 +51,9 @@ function isNull(c) {
   //your code here
   if(c == null){
 	return true;
-	}
-	else return false;
+  }
+
+  else return false;
   //return undefined;
   //end your code
 }

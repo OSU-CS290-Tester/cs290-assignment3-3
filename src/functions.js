@@ -41,7 +41,7 @@ bar = function(doubleArray){
 		doubleArray[i] *=2;
 	}
 	
-	return success;;
+	return success;
 }
 //end your code
 
