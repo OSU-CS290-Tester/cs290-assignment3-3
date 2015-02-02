@@ -11,9 +11,9 @@
 function returnObjectLiteral() {
   //your code here
   var fish = new Object();
-  fish.type = "Goldfish";
-  fish.brand = "Pepperidge Farm";
-  fish.flavor = "Cheddar";
+  fish.type = 'Goldfish';
+  fish.brand = 'Pepperidge Farm';
+  fish.flavor = 'Cheddar';
   fish.count = 2000;
   
   return fish;
@@ -45,23 +45,40 @@ function returnObjectLiteral() {
 */
 
 //your code here
-//function MessageLog(user){
-//  this.user = user;
-//  var sent = 0;
-//  var received = 0;
+function MessageLog(user){
+  this.user = user;
+  this.sent = 0;
+  this.received = 0;
+  this.sentMessages = new Array();
+  this.receivedMessage = "";
   
-//  this.logMessage = function(messageText, direction){
-//    if(direction == 0){
-//	  this.sent ++;
-//	}
-//	else if(direction == 1){
-//	  this.received ++;
-//	}
-//	else;
-// }
-//  this.getSentMessage = function(n){}
-//  this.totalSent = function(){return this.sent}
-//  this.totalReceived = function(){return this.received}
+  this.logMessage = function(messageText, direction){
+	//sent
+	if(direction == 0){
+	  this.sent ++;		//increment sent
+	  this.sentMessages.unshift(messageText);	//add new message to beginning
+	  if(this.sentMessages.length > 5){			//pop old message if > 5
+			this.sentMessages.pop();
+	  }
+	}
+	//received
+	else if(direction == 1){
+	  this.received++;		//increment received
+	  this.receivedMessage = messageText;
+	}
+	else {};
+ }
+  this.getSentMessage = function(n){
+	if(n < 0){
+		return sentMessages[0];
+	}
+	else if(n <= 4){
+		return this.sentMessages[n];
+	}
+	else return this.sentMessages[4];
+  }
+  this.totalSent = function(){return this.sent}
+  this.totalReceived = function(){return this.received}
 }
 //end your code
 
@@ -71,7 +88,9 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function(){
+	return this.receivedMessage;
+}
 //end your code
 
 /**
@@ -81,8 +100,8 @@ function returnObjectLiteral() {
 */
 
 //your code here
-//var myLog = new MessageLog(BlackHatGuy);
-//myLog.logMessage("foo", 1);
-//myLog.logMessage("bar", 1);
-//myLog.logMessage("baz", 1);
+var myLog = new MessageLog("BlackHatGuy");
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz", 1);
 //end your code
