@@ -1,1 +1,47 @@
-You log goes in this  file.
+Start:Tue, 27 Jan 2015 15:00:00 -0800
+ End: Tue, 27 Jan 2015 15:02:56 -0800
+Tasks: Added files
+
+Start:Tue, 27 Jan 2015 15:02:56 -0800
+ End: Tue, 27 Jan 2015 16:10:16 -0800
+Tasks: Defined uselessFunction and bar doubleArray function
+
+Start:Tue, 27 Jan 2015 16:10:16 -0800
+ End: Tue, 27 Jan 2015 16:41:50 -0800
+Tasks: Still working on parseGit function
+
+Start:Tue, 27 Jan 2015 16:41:50 -0800
+ End: Tue, 27 Jan 2015 16:58:15 -0800
+Tasks: Added variableModification() function from variables
+
+Start:Tue, 27 Jan 2015 16:58:15 -0800
+ End: Tue, 27 Jan 2015 17:03:42 -0800
+Tasks: added definitions of isString/isNull in variables.js
+
+Start:Tue, 27 Jan 2015 17:03:42 -0800
+ End: Tue, 27 Jan 2015 17:16:52 -0800
+Tasks: Added definition of returnObjectLiteral in objects.j
+
+Start:Sun, 1 Feb 2015 13:25:27 -0800
+ End: Sun, 1 Feb 2015 13:44:59 -0800
+Tasks: debugging after error test.
+
+Start:Sun, 1 Feb 2015 13:44:59 -0800
+ End: Sun, 1 Feb 2015 13:57:33 -0800
+Tasks: Debugged variables.js
+
+Start:Sun, 1 Feb 2015 13:57:33 -0800
+ End: Sun, 1 Feb 2015 14:41:00 -0800
+Tasks: Still debugging functions.js and objects.js
+
+Start:Sun, 1 Feb 2015 14:41:00 -0800
+ End: Sun, 1 Feb 2015 16:31:56 -0800
+Tasks: debugged functions.js, took about 20 minute break
+
+Start:Sun, 1 Feb 2015 16:31:56 -0800
+ End: Sun, 1 Feb 2015 17:54:48 -0800
+Tasks: finished debugging objects.js
+
+Start:Sun, 1 Feb 2015 22:12:13 -0800
+ End: Sun, 1 Feb 2015 22:18:13 -0800
+Tasks: updated formatting of src files.
