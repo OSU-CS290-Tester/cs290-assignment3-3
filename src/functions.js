@@ -54,7 +54,7 @@ bar = function(doubleArray){
 */
 function GitLog(hash, date, message) {
     this.hash = hash;
-    this.date = date;
+    this.date = new Date(date);
     this.message = message;
 }
 
@@ -82,18 +82,30 @@ function parseGit(logArray){
 	var temphash;
 	var tempdate;
 	var tempmess;
+	var parsed;
+	var i;
+	var tempGit;
+	var gitArray = new Array();
 	
 	//instantiate new array for GitLog objects
 	var gitArray = new Array();
 	//iterate over string array
-	for (var i = 0; i < logArray.length; i++){
-		//parse hash (slice? split?)
-		temphash = logArray[i].split(' ', 1);
+	for (i = 0; i < logArray.length; i++){
+		//parse the string by spaces
+		parsed = (logArray[i]).split(" ", 1);
+		
+		//parse hash
+		temphash = parsed[0];
+		
 		//parse date
+		tempdate = (logArray[i]).slice(8, 38);
 		
 		//parse message
+		parsed = (logArray[i]).split("\"");
+		tempmess = parsed[1];
+		
 		//construct GitLog
-		gitArray[i] = GitLog(temphash, tempdate, tempmess);
+		gitArray[i] = new GitLog(temphash, tempdate, tempmess); 
 	}
 	//return array of GitLog objects
 	return gitArray;
