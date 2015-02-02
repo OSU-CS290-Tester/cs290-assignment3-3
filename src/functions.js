@@ -14,7 +14,7 @@
 
 //your code here
 function uselessFunction() {
-	return null;
+  return null;
 }
 //end your code
 
@@ -33,15 +33,14 @@ var barType = typeof bar;
 
 //your code here
 bar = function(doubleArray){
-	var success = true;
-	for (var i = 0; i < doubleArray.length; i++){
-		if(isNaN(doubleArray[i])){
-			success = false;
-		}
-		doubleArray[i] *=2;
-	}
-	
-	return success;
+  var success = true;
+  for (var i = 0; i < doubleArray.length; i++){
+    if(isNaN(doubleArray[i])){
+      success = false;
+    }
+    doubleArray[i] *=2;
+  }
+  return success;
 }
 //end your code
 
@@ -53,9 +52,9 @@ bar = function(doubleArray){
 * @property {string} message - the commit message
 */
 function GitLog(hash, date, message) {
-    this.hash = hash;
-    this.date = new Date(date);
-    this.message = message;
+  this.hash = hash;
+  this.date = new Date(date);
+  this.message = message;
 }
 
 /**
@@ -79,35 +78,35 @@ function GitLog(hash, date, message) {
 
 //your code here
 function parseGit(logArray){
-	var temphash;
-	var tempdate;
-	var tempmess;
-	var parsed;
-	var i;
-	var tempGit;
-	var gitArray = new Array();
+  var temphash;
+  var tempdate;
+  var tempmess;
+  var parsed;
+  var i;
+  var tempGit;
+  var gitArray = new Array();
 	
-	//instantiate new array for GitLog objects
-	var gitArray = new Array();
-	//iterate over string array
-	for (i = 0; i < logArray.length; i++){
-		//parse the string by spaces
-		parsed = (logArray[i]).split(" ", 1);
+  //instantiate new array for GitLog objects
+  var gitArray = new Array();
+  //iterate over string array
+  for (i = 0; i < logArray.length; i++){
+    //parse the string by spaces
+    parsed = (logArray[i]).split(" ", 1);
 		
-		//parse hash
-		temphash = parsed[0];
+    //parse hash
+    temphash = parsed[0];
 		
-		//parse date
-		tempdate = (logArray[i]).slice(8, 38);
+    //parse date
+    tempdate = (logArray[i]).slice(8, 38);
 		
-		//parse message
-		parsed = (logArray[i]).split("\"");
-		tempmess = parsed[1];
+    //parse message
+    parsed = (logArray[i]).split("\"");
+    tempmess = parsed[1];
 		
-		//construct GitLog
-		gitArray[i] = new GitLog(temphash, tempdate, tempmess); 
-	}
-	//return array of GitLog objects
-	return gitArray;
+    //construct GitLog
+    gitArray[i] = new GitLog(temphash, tempdate, tempmess); 
+  }
+  //return array of GitLog objects
+  return gitArray;
 }
 //end your code

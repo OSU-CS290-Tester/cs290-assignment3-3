@@ -53,29 +53,30 @@ function MessageLog(user){
   this.receivedMessage = "";
   
   this.logMessage = function(messageText, direction){
-	//sent
-	if(direction == 0){
-	  this.sent ++;		//increment sent
-	  this.sentMessages.unshift(messageText);	//add new message to beginning
-	  if(this.sentMessages.length > 5){			//pop old message if > 5
-			this.sentMessages.pop();
+    //sent
+    if(direction == 0){
+      this.sent ++;		//increment sent
+	  this.sentMessages.unshift(messageText);		//add new message to beginning
+      if(this.sentMessages.length > 5){			//pop old message if > 5
+        this.sentMessages.pop();
 	  }
-	}
+    }
+	
 	//received
-	else if(direction == 1){
-	  this.received++;		//increment received
-	  this.receivedMessage = messageText;
-	}
-	else {};
+    else if(direction == 1){
+      this.received++;		//increment received
+      this.receivedMessage = messageText;
+    }
+    else {};
  }
   this.getSentMessage = function(n){
-	if(n < 0){
-		return sentMessages[0];
-	}
-	else if(n <= 4){
-		return this.sentMessages[n];
-	}
-	else return this.sentMessages[4];
+    if(n < 0){
+	  return sentMessages[0];
+    }
+    else if(n <= 4){
+      return this.sentMessages[n];
+    }
+    else return this.sentMessages[4];
   }
   this.totalSent = function(){return this.sent}
   this.totalReceived = function(){return this.received}
@@ -89,7 +90,7 @@ function MessageLog(user){
 */
 //your code here
 MessageLog.prototype.lastReceivedMessage = function(){
-	return this.receivedMessage;
+  return this.receivedMessage;
 }
 //end your code
 
